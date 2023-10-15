@@ -24,6 +24,7 @@ Next, configure the following URLs for your application under the "Application U
 * Allowed Callback URLs: http://localhost:3000
 * Allowed Logout URLs: http://localhost:3000
 * Allowed Web Origins: http://localhost:3000
+
 These URLs should reflect the origins that your application is running on. Allowed Callback URLs may also include a path, depending on where you're handling the callback.
 
 Take note of the Client ID and Domain values under the "Basic Information" section. You'll need these values in the next step.
