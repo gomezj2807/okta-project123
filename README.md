@@ -7,9 +7,9 @@ Quickstart : https://auth0.com/docs/quickstart/spa/react
 
 ## Installation
 
-In the project directory, you can run:
+Using npm
 
-### `npm start`
+### `npm install @auth0/auth0-react'
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
