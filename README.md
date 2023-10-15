@@ -21,6 +21,41 @@ Scroll down and click on the "Show Advanced Settings" link.
 Under "Advanced Settings", click on the "OAuth" tab.
 Ensure that "JsonWebToken Signature Algorithm" is set to RS256 and that "OIDC Conformant" is enabled.
 
+Next, configure the following URLs for your application under the "Application URIs" section of the "Settings" page:
+
+Allowed Callback URLs: http://localhost:3000
+Allowed Logout URLs: http://localhost:3000
+Allowed Web Origins: http://localhost:3000
+These URLs should reflect the origins that your application is running on. Allowed Callback URLs may also include a path, depending on where you're handling the callback.
+
+Take note of the Client ID and Domain values under the "Basic Information" section. You'll need these values in the next step.
+
+## Configure the SDK
+
+Configure the SDK
+Configure the SDK by wrapping your application in Auth0Provider:
+
+// src/index.js
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { Auth0Provider } from '@auth0/auth0-react';
+import App from './App';
+
+const root = createRoot(document.getElementById('app'));
+
+root.render(
+  <Auth0Provider
+    domain="YOUR_AUTH0_DOMAIN"
+    clientId="YOUR_AUTH0_CLIENT_ID"
+    authorizationParams={{
+      redirect_uri: window.location.origin,
+    }}
+  >
+    <App />
+  </Auth0Provider>
+);
+
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
