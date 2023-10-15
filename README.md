@@ -1,11 +1,11 @@
-# Cruise0 Node JS test app
+# Cruise0 React JS test app integrated with Auth0
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Documentation
 Quickstart : https://auth0.com/docs/quickstart/spa/react
 
-## Available Scripts
+## Installation
 
 In the project directory, you can run:
 
