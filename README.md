@@ -34,7 +34,7 @@ Take note of the Client ID and Domain values under the "Basic Information" secti
 
 Configure the SDK
 Configure the SDK by wrapping your application in Auth0Provider:
-
+```ruby
 // src/index.js
 import React from 'react';
 import { createRoot } from 'react-dom/client';
@@ -54,7 +54,7 @@ root.render(
     <App />
   </Auth0Provider>
 );
-
+```
 
 ### `npm test`
 
