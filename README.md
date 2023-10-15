@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Cruise0 Node JS test app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
