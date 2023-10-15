@@ -12,6 +12,14 @@ Using npm
 ### `npm install @auth0/auth0-react'
 
 ## Configure Auth0
+Create a Single Page Application in the Auth0 Dashboard: https://manage.auth0.com/#/applications
+
+If you're using an existing application, verify that you have configured the following settings in your Single Page Application:
+
+Click on the "Settings" tab of your application's page.
+Scroll down and click on the "Show Advanced Settings" link.
+Under "Advanced Settings", click on the "OAuth" tab.
+Ensure that "JsonWebToken Signature Algorithm" is set to RS256 and that "OIDC Conformant" is enabled.
 
 ### `npm test`
 
