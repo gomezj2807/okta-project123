@@ -2,11 +2,6 @@
 
 ## Documentation
 Quickstart: https://auth0.com/docs/quickstart/spa/react
-Social Identity Providers: https://auth0.com/docs/authenticate/identity-providers/social-identity-providers
-Verifying emails: https://auth0.com/docs/manage-users/user-accounts/verify-emails
-New Universal Login Experience: https://auth0.com/docs/authenticate/login/auth0-universal-login/new-experience#flow-customization
-
-
 
 ## Installation
 
