@@ -54,6 +54,68 @@ root.render(
   </Auth0Provider>
 );
 ```
+
+## Add Login to Your Application
+The Auth0 React SDK gives you tools to quickly implement user authentication in your React application, such as creating a login button using the loginWithRedirect() method from the useAuth0() hook. Executing loginWithRedirect() redirects your users to the Auth0 Universal Login Page, where Auth0 can authenticate them. Upon successful authentication, Auth0 will redirect your users back to your application.
+```ruby
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+
+const LoginButton = () => {
+  const { loginWithRedirect } = useAuth0();
+
+  return <button onClick={() => loginWithRedirect()}>Log In</button>;
+};
+
+export default LoginButton;
+```
+
+## Add Logout to Your Application
+Now that you can log in to your React application, you need a way to log out. You can create a logout button using the logout() method from the useAuth0() hook. Executing logout() redirects your users to your Auth0 logout endpoint (https://YOUR_DOMAIN/v2/logout) and then immediately redirects them to your application.
+```ruby
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+
+const LogoutButton = () => {
+  const { logout } = useAuth0();
+
+  return (
+    <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+      Log Out
+    </button>
+  );
+};
+
+export default LogoutButton;
+```
+
+##Show User Profile Information
+The Auth0 React SDK helps you retrieve the profile information associated with logged-in users quickly in whatever component you need, such as their name or profile picture, to personalize the user interface. The profile information is available through the user property exposed by the useAuth0() hook. Take this Profile component as an example of how to use it:
+```ruby
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+
+const Profile = () => {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
+
+  return (
+    isAuthenticated && (
+      <div>
+        <img src={user.picture} alt={user.name} />
+        <h2>{user.name}</h2>
+        <p>{user.email}</p>
+      </div>
+    )
+  );
+};
+
+export default Profile;
+```
+
 For more code samples on how to integrate auth0-react SDK in your React application, have a look at our examples here: https://github.com/auth0/auth0-react/blob/main/EXAMPLES.md
 
 
