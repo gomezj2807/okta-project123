@@ -6,8 +6,9 @@ Quickstart : https://auth0.com/docs/quickstart/spa/react
 ## Installation
 
 Using npm
-
-### `npm install @auth0/auth0-react'
+```
+npm install @auth0/auth0-react
+```
 
 ## Configure Auth0
 Create a Single Page Application in the Auth0 Dashboard : https://manage.auth0.com
@@ -89,7 +90,7 @@ const LogoutButton = () => {
 export default LogoutButton;
 ```
 
-##Show User Profile Information
+## Show User Profile Information
 The Auth0 React SDK helps you retrieve the profile information associated with logged-in users quickly in whatever component you need, such as their name or profile picture, to personalize the user interface. The profile information is available through the user property exposed by the useAuth0() hook. Take this Profile component as an example of how to use it:
 ```ruby
 import React from "react";
